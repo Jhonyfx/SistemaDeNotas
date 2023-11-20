@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% block content %} 
+<h3>Cursos</h3>
+
+
+    <p></p>
+    <p></p>
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Curso</th> 
+        <th scope="col">Grado</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for course in curso %}
+        <td>{{course.nombre}}</td>
+        <td>{{course.grado.nombre}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
